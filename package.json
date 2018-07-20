@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://cuaskin.github.io/tax/",
+  "scripts": {
+    "start0": "cross-env NODE_PATH=src react-scripts start",
+    "build0": "cross-env NODE_PATH=src react-scripts build",
+    "prestart": "webpack --config webpack.config.js",
+    "start": "react-scripts start",
+    "dev": "webpack-dev-server --progress --colors",
+    "prepublish": "webpack --config webpack.config.js",
+    "build": "react-scripts build",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "cross-env NODE_PATH=src react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -30,18 +43,7 @@
     "redux-thunk": "^2.3.0",
     "whatwg-fetch": "^2.0.3"
   },
-  "scripts": {
-    "start0": "cross-env NODE_PATH=src react-scripts start",
-    "build0": "cross-env NODE_PATH=src react-scripts build",
-    "prestart": "webpack --config webpack.config.js",
-    "start": "react-scripts start",
-    "dev": "webpack-dev-server --progress --colors",
-    "build": "react-scripts build",
-    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
-    "eject": "cross-env NODE_PATH=src react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+  
   "license": "MIT",
   "devDependencies": {
     "@types/react-router": "^4.0.29",
