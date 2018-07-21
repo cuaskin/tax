@@ -1,4 +1,5 @@
 # Tax Demo 
 
-  Zamandan tassarruf ve hzılı ulaşım sağlar.
+  Zamandan tassarruf ve hızlı ulaşım sağlar.
+ 
 
