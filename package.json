@@ -1,6 +1,8 @@
 {
   "name": "tax",
   "version": "0.1.0",
+  "author":"Cüneyt Aşkın",
+  "definition":"React-redux : Tax Demo",
   "private": true,
   "homepage": "https://cuaskin.github.io/tax/",
   "scripts": {
@@ -8,7 +10,6 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server":"babel-node server/api/index.js",
     "client":"react-scripts start",
-    "start0": "cross-env NODE_ENV=development babel-node server/main.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",

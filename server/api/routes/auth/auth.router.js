@@ -11,7 +11,7 @@ const users = [
     firstName: "Cuneyt",
     lastName: "Askin",
     email: "cuneyt@peer.pr",
-    password: "123456"
+    password: "123"
   }
 ];
 
@@ -60,7 +60,7 @@ const route = () => {
     });
   });
 
-  /** sign up */
+  /** Sign Up */
   router.route("/sign-up").post((req, res) => {
     const { email, password } = req.body;
 
@@ -70,7 +70,7 @@ const route = () => {
       .digest("hex");
 
     const newDriver = new Driver({
-      firstName: "Mehmet",
+      firstName: "Cüneyt",
       lastName: "Aşkın",
       email: email,
       password: passwordHashed,
@@ -104,7 +104,6 @@ const route = () => {
         res.send({ status: false, error: err });
       }
     );
-    //res.send(passwordHashed); //if we un comment, given error about not changed header
   });
 
   return router;

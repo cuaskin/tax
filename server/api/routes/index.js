@@ -3,7 +3,7 @@ import PassengerRouter from "./passenger/passenger.router";
 import config from "../config";
 import jwtMiddleware from "express-jwt-middleware";
 
-/**endoced jwtwebtoken */
+/**Endoced jwtwebtoken */
 const jwtCheck = jwtMiddleware(config.jwtSecret);
 
 const AppRoutes = app => {

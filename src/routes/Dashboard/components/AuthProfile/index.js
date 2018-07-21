@@ -7,7 +7,9 @@ class AuthProfile extends Component {
         <div className="home-container">
           <h1>Profil Sayfası</h1>
 
-          <p>Tasarım Aşamasındadır.!</p>
+          <p>
+            Çok <strong>yakında</strong> hizmete açılacaktır.
+          </p>
         </div>
       </div>
     );

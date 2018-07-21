@@ -27,7 +27,8 @@ const config = {
 
 module.exports = config;
 
-//push rules
+//Push Rules
+//Js-Jsx Files
 config.module.rules.push({
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
@@ -43,14 +44,14 @@ config.module.rules.push({
             "babel-plugin-transform-runtime",
             {
               helpers: true,
-              polyfill: false, // we polyfill needed features in src/normalize.js
+              polyfill: false,
               regenerator: true
             }
           ],
           [
             "babel-plugin-transform-object-rest-spread",
             {
-              useBuiltIns: true // we polyfill Object.assign in src/normalize.js
+              useBuiltIns: true
             }
           ]
         ],
@@ -73,7 +74,6 @@ config.module.rules.push({
 });
 
 // Images
-// ------------------------------------
 config.module.rules.push({
   test: /\.(png|woff|woff2|eot|ttf|svg)$/,
   loader: "url-loader?limit=100000"

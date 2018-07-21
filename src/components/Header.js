@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router";
 
-/** ıt has a state Component like Class extends React.Component*/
+/** It has a state Component like Class extends React.Component*/
 class Header extends React.Component {
   constructor() {
-    super(); /** call constructur which is extends class like React.Component */
+    super();
 
     this.state = {
       isNavOpen: false
     };
   }
 
-  /** functin for collapse button */
+  /** Functin for Collapse Button */
   buttonClicked() {
     console.log("Collapse Clicked.");
     this.setState({
