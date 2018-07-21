@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname,"public"),
+    path: path.resolve(__dirname, "public"),
     filename: "dev_bundle.js"
   },
   module: {
@@ -17,9 +17,10 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "tax-app",
+      filename: "index.html",
       template: "./public/index.html",
-      filename:"index.html",
-      inject: "body"
+      inject: "true"
     })
   ]
 };
@@ -69,4 +70,11 @@ config.module.rules.push({
       }
     }
   ]
+});
+
+// Images
+// ------------------------------------
+config.module.rules.push({
+  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+  loader: "url-loader?limit=100000"
 });

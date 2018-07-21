@@ -10,6 +10,8 @@ mongoose.connect(config.connStr);
 mongoose.Promise = global.Promise;
 
 const app = express();
+//const PORT = process.env.PORT || 3300;
+const PORT = 3300;
 
 app.use(cors()); // API ye farklı originlerden bağlantı sağlamak için.
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
@@ -26,4 +28,6 @@ app.get("/", (req, res) => {
   res.send(sonuc);
 });
 
-app.listen(3300, () => console.log('Server is running at http://localhost:3300'));
+app.listen(PORT, () =>
+  console.log(`Server is running at http://localhost:${PORT}`)
+);

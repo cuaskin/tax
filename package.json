@@ -4,15 +4,14 @@
   "private": true,
   "homepage": "https://cuaskin.github.io/tax/",
   "scripts": {
-    "start0": "cross-env NODE_PATH=src react-scripts start",
-    "build0": "cross-env NODE_PATH=src react-scripts build",
     "prestart": "webpack --config webpack.config.js",
-    "start": "react-scripts start",
-    "dev": "webpack-dev-server --progress --colors",
-    "prepublish": "webpack --config webpack.config.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server":"babel-node server/api/index.js",
+    "client":"react-scripts start",
+    "start0": "cross-env NODE_ENV=development babel-node server/main.js",
     "build": "react-scripts build",
-    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
-    "eject": "cross-env NODE_PATH=src react-scripts eject",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -43,7 +42,6 @@
     "redux-thunk": "^2.3.0",
     "whatwg-fetch": "^2.0.3"
   },
-  
   "license": "MIT",
   "devDependencies": {
     "@types/react-router": "^4.0.29",
@@ -63,6 +61,7 @@
     "chai-as-promised": "^6.0.0",
     "chai-enzyme": "^0.6.1",
     "chalk": "^1.1.3",
+    "clean-webpack-plugin": "^0.1.19",
     "codecov": "^2.2.0",
     "connect-history-api-fallback": "^1.3.0",
     "cross-env": "^5.2.0",
